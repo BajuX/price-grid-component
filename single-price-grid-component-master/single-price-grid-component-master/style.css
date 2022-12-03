@@ -1,11 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
 }
 
 body {
-  background: hsl(204deg, 43%, 93%);
+  background: hsl(218deg, 22%, 67%);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -13,20 +16,79 @@ body {
 }
 body .container {
   width: 720px;
-  height: 720px;
+  height: 504px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
   grid-template-areas: "description description" "subscription why-us";
   gap: 0px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 body .container #description {
   grid-area: description;
-  background: hsl(218deg, 22%, 67%);
+  background: hsl(204deg, 43%, 93%);
+  padding: 50px;
+}
+body .container #description h1 {
+  color: hsl(179deg, 62%, 43%);
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+body .container #description h2 {
+  color: hsl(71deg, 73%, 54%);
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+body .container #description p {
+  color: hsl(218deg, 22%, 67%);
 }
 body .container #subscription {
   grid-area: subscription;
+  background: hsl(179deg, 60%, 40%);
+  padding: 25px;
+  color: hsl(204deg, 43%, 93%);
+}
+body .container #subscription h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+body .container #subscription b {
+  font-size: 32px;
+}
+body .container #subscription span {
+  color: hsl(218deg, 22%, 67%);
+  position: relative;
+  top: -5px;
+}
+body .container #subscription p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+body .container #subscription button {
+  border: none;
+  background: hsl(71deg, 73%, 54%);
+  width: 75%;
+  height: 50px;
+  position: relative;
+  left: 49.8px;
+  border-radius: 5px;
+  color: hsl(204deg, 43%, 93%);
 }
 body .container #why-us {
   grid-area: why-us;
+  background: hsl(179deg, 74%, 43%);
+  padding: 25px;
+  color: hsl(204deg, 43%, 93%);
+}
+body .container #why-us h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+body .container #why-us p {
+  color: hsl(204deg, 73%, 85%);
+  font-size: 12px;
+  line-height: 20px;
 }/*# sourceMappingURL=style.css.map */

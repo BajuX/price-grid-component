@@ -1,35 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
 }
 
 body {
-  background: hsl(204, 43%, 93%);
+  background: hsl(218, 22%, 67%);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   .container {
-    width: 0.5 * 1440px;
-    height: 0.5 * 1440px;
+    width: 0.5*1440px;
+    height: 0.35* 1440px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "description description"
       "subscription why-us";
     gap: 0px;
+    border-radius: 10px;
+    overflow: hidden;
     #description {
       grid-area: description;
-      background: hsl(218, 22%, 67%);
+      background: hsl(204, 43%, 93%);
+      padding: 50px;
+
+      h1{
+
+        color: hsl(179, 62%, 43%);
+        font-weight: 700;
+        font-size: 32px;
+        margin: {
+         
+            bottom: 10px;
+            top: 20px;
+        }
+      }
+
+      h2{
+        color: hsl(71, 73%, 54%);
+        font-weight: 700;
+        font-size: 20px;
+        margin: {
+            top: 10px;
+            bottom: 20px;
+        };
+      }
+
+      p {
+        color: hsl(218, 22%, 67%);
+      }
     }
     #subscription {
       grid-area: subscription;
+      background: hsl(179, 60%, 40%) ;
+      padding: 25px;
+      color: hsl(204, 43%, 93%);
+      h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+
+      b {
+        font-size: 32px;
+      }
+
+      span {
+        color: hsl(218, 22%, 67%);
+        position: relative;
+        top: -5px;
+      }
+
+      p {
+        margin: {
+            top: 20px;
+            bottom: 20px;
+        };
+      }
+      button {
+        border: none;
+        background: hsl(71, 73%, 54%);
+        width: 75%;
+        height: 50px;
+        position: relative;
+        left: 0.2*249px;
+        border-radius: 5px;
+        color: hsl(204, 43%, 93%);
+      }
     }
 
     #why-us {
       grid-area: why-us;
+      background: hsl(179, 74%, 43%);
+      padding: 25px;
+      color: hsl(204, 43%, 93%);
+      h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+      p{
+        color: hsl(204, 73%, 85%);
+        font-size: 12px;
+        line-height: 20px;
+      }
     }
   }
 }

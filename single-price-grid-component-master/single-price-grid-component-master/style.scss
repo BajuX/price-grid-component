@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 16px;
 }
 
@@ -15,8 +15,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   .container {
-    width: 0.5*1440px;
-    height: 0.35* 1440px;
+    width: 0.5 * 1440px;
+    height: 0.35 * 1440px;
     display: grid;
     grid-template-areas:
       "description description"
@@ -29,26 +29,24 @@ body {
       background: hsl(204, 43%, 93%);
       padding: 50px;
 
-      h1{
-
+      h1 {
         color: hsl(179, 62%, 43%);
         font-weight: 700;
         font-size: 32px;
         margin: {
-         
-            bottom: 10px;
-            top: 20px;
+          bottom: 10px;
+          top: 20px;
         }
       }
 
-      h2{
+      h2 {
         color: hsl(71, 73%, 54%);
         font-weight: 700;
         font-size: 20px;
         margin: {
-            top: 10px;
-            bottom: 20px;
-        };
+          top: 10px;
+          bottom: 20px;
+        }
       }
 
       p {
@@ -57,7 +55,7 @@ body {
     }
     #subscription {
       grid-area: subscription;
-      background: hsl(179, 60%, 40%) ;
+      background: hsl(179, 60%, 40%);
       padding: 25px;
       color: hsl(204, 43%, 93%);
       h2 {
@@ -77,17 +75,16 @@ body {
 
       p {
         margin: {
-            top: 20px;
-            bottom: 20px;
-        };
+          top: 20px;
+          bottom: 20px;
+        }
       }
       button {
         border: none;
         background: hsl(71, 73%, 54%);
-        width: 75%;
+        width: 100%;
         height: 50px;
         position: relative;
-        left: 0.2*249px;
         border-radius: 5px;
         color: hsl(204, 43%, 93%);
       }
@@ -102,11 +99,70 @@ body {
         font-size: 22px;
         margin-bottom: 20px;
       }
-      p{
+      p {
         color: hsl(204, 73%, 85%);
         font-size: 12px;
         line-height: 20px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    .container {
+      width: 0.8 * 375px;
+      height: 1.8 * 375px;
+      grid-template-areas:
+        "description"
+        "subscription"
+        "why-us";
+
+        #description {
+          padding: 20px;
+
+          h1 {
+            font-size: 24px;
+            margin: {
+              top: 10px;
+              bottom: 10px;
+            };
+          }
+
+          h2 {
+            font-size: 18px;
+            margin: {
+              top: 10px;
+              bottom: 10px;
+            };
+          }
+
+          p {
+            font-size: 14px;
+            margin: {
+              top: 10px;
+              bottom: 10px;
+            };
+          }
+        }
+
+        #subscription{
+          h2 {
+            font-size: 18px;
+          }
+        }
+
+        #why-us {
+            h2 {
+              font-size: 18px;
+
+            }
+            padding: 20px;
+            p {
+              line-height: 18px;
+              
+            }
+        }
     }
   }
 }
